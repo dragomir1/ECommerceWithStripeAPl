@@ -1,0 +1,28 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-3 mt-3 pt-5">
+        Lamas for sale
+      </h1>
+      <p>Imagine these cute animals in your backyard...</p>
+      <form action="/charge" method="POST">
+        <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{stripePublishableKey}}"
+        data-amount="10000"
+        data-name="Buying Lamas"
+        data-description="ECommerce site with Stripe API"
+        data-image="/images/puppycheckout.png"
+        data-locale="auto">
+        </script>
+        <script type="text/javascript">
+        document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-light text-black btn-lg">Purchase</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img src="/images/lamas.jpg" alt="lamas" class="img-fluid py-6">
+    </div>
+  </div>
+</section>
